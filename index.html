@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ביקור שמאי</title>
+<meta name="description" content="אפליקציית שטח לביקור שמאי בדירות בפרויקט פינוי בינוי: רשימת צילום אחידה לכל מרכיבי הדירה, לצורך ניקוד סדר בחירת הדירות החדשות.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#13284B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ביקור שמאי">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#main">דלג לתוכן</a>
+<header class="bar">
+  <a class="bar-home" href="#/">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h3l1.6-2.5h6.8L17 8.5h3v10.5H4z"/><circle cx="12" cy="13.5" r="3.4"/></svg>
+    <span>ביקור שמאי</span>
+  </a>
+  <span class="bar-net" id="net" hidden>לא מקוון · הנתונים נשמרים במכשיר</span>
+</header>
+<main id="main" tabindex="-1"></main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<dialog class="lb" id="lb" aria-label="תצוגת תמונה">
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <div class="lb-actions">
+    <button type="button" class="btn btn-s" id="lb-del">מחיקת התמונה</button>
+    <button type="button" class="btn btn-p" id="lb-close">סגירה</button>
+  </div>
+</dialog>
+<input type="file" id="in-cam" accept="image/*" capture="environment" hidden>
+<input type="file" id="in-gal" accept="image/*" multiple hidden>
+<input type="file" id="in-zip" accept=".zip,application/zip" hidden>
+<noscript><p class="wrap">כדי להשתמש באפליקציה צריך להפעיל JavaScript בדפדפן.</p></noscript>
+<script src="app.js" defer></script>
+</body>
+</html>
